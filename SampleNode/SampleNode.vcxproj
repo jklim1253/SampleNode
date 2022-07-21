@@ -76,6 +76,12 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="configuration.hpp" />
+    <ClInclude Include="server.hpp" />
+    <ClInclude Include="session.hpp" />
+    <ClInclude Include="use_asio.hpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
