@@ -17,7 +17,7 @@ public:
   using container = std::unordered_map<key_type, value_type>;
 public:
 
-  static const value_type nkey;
+  static const value_type nvalue;
 
 public:
   basic_configuration()
@@ -39,7 +39,7 @@ public:
   value_type const& value(key_type const& key) const
   {
     auto target = _depot.find(key);
-    if (target == _depot.end()) return nkey;
+    if (target == _depot.end()) return nvalue;
 
     return target->second;
   }
@@ -57,7 +57,7 @@ private:
   container _depot;
 };
 template<class K, class V>
-const typename basic_configuration<K, V>::value_type basic_configuration<K, V>::nkey;
+const typename basic_configuration<K, V>::value_type basic_configuration<K, V>::nvalue;
 
 using configuration = basic_configuration<std::string, std::string>;
 

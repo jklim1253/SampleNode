@@ -78,6 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="configuration.hpp" />
+    <ClInclude Include="protocol.singlestring.hpp" />
     <ClInclude Include="server.hpp" />
     <ClInclude Include="session.hpp" />
     <ClInclude Include="use_asio.hpp" />

@@ -97,7 +97,7 @@ private:
 
     _sessionlist.push_back(session);
 
-    asio::post(_ioc, std::bind(&self::start, session));
+    asio::dispatch(_ioc, std::bind(&self::start, session));
   }
 
 private:

@@ -44,11 +44,14 @@ public:
 
   void start()
   {
-
+    asio::dispatch(r_ioc, std::bind(&self::read, this));
   }
   void stop()
   {
-
+    if (_socket.is_open())
+    {
+      _socket.close();
+    }
   }
 private:
   void on_error(error_code const& ec, const char* tag)
